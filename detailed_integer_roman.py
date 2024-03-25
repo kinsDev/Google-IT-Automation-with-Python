@@ -15,7 +15,8 @@ RomanNumerals = {
     1: "I"
 }
 
-num = int(input("Enter a number: "))
+original_num = int(input("Enter a number: "))
+num = original_num
 roman_numeral = ""
 
 for number, roman in RomanNumerals.items():
@@ -23,4 +24,12 @@ for number, roman in RomanNumerals.items():
         roman_numeral += roman
         num -= number
 
+print("Input: num = ", original_num)
 print("Output: ", roman_numeral)
+
+# Provide an explanation of the output
+print("Explanation:", end=" ")
+for char in roman_numeral:
+    if char in RomanNumerals.values():
+        print(char, "=", list(RomanNumerals.keys())[list(RomanNumerals.values()).index(char)], end=". ")
+print()
