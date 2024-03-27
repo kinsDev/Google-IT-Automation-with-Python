@@ -7,7 +7,7 @@ def countBits(num):
         return counter[:num+1]
     else:
         return 0
-print(countBits(int(num)))
+print("Output: ", countBits(int(num)))
 
 # How does the function really work?
 """
