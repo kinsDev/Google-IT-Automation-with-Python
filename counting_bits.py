@@ -1,7 +1,7 @@
 num = int(input("Input: "))
 def countBits(num):
     counter = [0]
-    if num >=  1:
+    if num >= 1:
         while len(counter) <= num:
             counter = counter + [i + 1 for i in counter]
         return counter[:num+1]
